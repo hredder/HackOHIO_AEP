@@ -1,0 +1,131 @@
+html {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100%;
+  background-color: #AFAFAF;
+}
+body {
+  margin: 0;
+}
+h1 {
+  text-shadow: 0px 5px 10px #eee;
+  text-decoration: underline;
+  padding: 10px;
+  font-size: 40px;
+}
+h2 {
+  padding-bottom: 20px;
+}
+p {
+  font-size: 17px;
+}
+table {
+  table-layout: fixed;
+  width: 80%;
+  border-radius: 10px;
+  background-color: #da291c;
+}
+td {
+  padding: 10px;
+}
+button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px 0px;
+  transition: 0.2s ease-in-out;
+  background-color: lightgray;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border-radius: 8px;
+}
+img {
+  width: 100%;
+  border: 1px solid black;
+}
+.header {
+  color: white;
+  background-image: url("https://www.aep.com/assets/images/photos/about/north-central-energy.png");
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+#buttons {
+  border: 3px solid black;
+  padding: 3px;
+  margin-left: 20%;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: linear-gradient(to bottom right, rgb(230, 50, 50) 0%, rgb(200, 0, 0) 100%);
+}
+#window {
+  margin-top: 0px;
+  padding-bottom: 40px;
+  margin-left: 22%;
+  margin-right: 2%;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+.optionButton {
+  border: none;
+  border-radius: 0;
+  padding: 20px 10px;
+}
+.optionButton:hover {
+  box-shadow:inset 0px 0px 0px 8px gray;
+  transform: scale(1.2);
+}
+.grandButton {
+  border: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+  border-radius: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #da291c;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+  padding-left: 13%;
+}
+#chart2, #chart3, #chart4, #chart5, #chart6, #chart7, #chart8, #chart9, #chart10 {
+  display: none;
+}
+.grandButton:hover {
+  box-shadow: none;
+  background-color: lightgray;
+}
+#navBar {
+  top: 0;
+  height: 100%;
+  background-color: #af2218;
+  position: absolute;
+  border-right: 5px solid #a61e14;
+  transition: 0.3s ease-in-out;
+}
+#hamburger {
+  font-size: 15px;
+  padding: 12px 0px;
+  background-color: #af2218;
+  color: white;
+  border: 2px solid black;
+  position: absolute;
+  left: 100%;
+  width: 70px;
+  margin-left: 30px;
+  top: 30px
+}
+#hamburger:hover {
+  color: black;
+  box-shadow: none;
+  background-color: white;
+}

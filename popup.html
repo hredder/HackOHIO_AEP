@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/AEP_logo.svg/2560px-AEP_logo.svg.png" style="border: none; position: absolute; width: 140px; right: 10px; top: 10px">
+    <canvas id="canvas" style="position: absolute; top: 120px; right: 20px; width: 150px; height: 150px"width=300, height=300></canvas>
+    <div class="header">
+      <h1>Practical Turbines</h1>
+      <p>An analysis of the AEP North Central Energy Facilities</p>
+    </div>
+    <hr style="padding: 2px; background-color: black; margin: 0; border: none;">
+    <!-- Table to distribute buttons evenly -->
+    <div style="margin-left: 7%; margin-right: 7%; position: absolute; top: 305px">
+      <!-- Buttons for menu -->
+      <div style="width: 10%; position: absolute; border: 1px solid black; border-radius:5px">
+        <button class="optionButton" style="border-top-right-radius: 5px; border-top-left-radius: 5px">Wind Speed</button>
+        <button class="optionButton">Power (output)</button>
+        <button class="optionButton">Rotor Speed</button>
+        <button class="optionButton">Downtime</button>
+        <button class="optionButton">Temperatures</button>
+        <button class="optionButton" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px">Vibrations</button>
+      </div>
+
+      <!-- List of buttons -->
+      <table id="buttons">
+        <tr>
+          <td><button id="b1" class="button">Descriptions</button></td>
+          <td><button id="b2" class="button">Charts</button></td>
+          <td><button id="b3" class="button">Raw Data</button></td>
+          <!-- <td><button id="b4" class="button">About</button></td> -->
+        </tr>
+      </table>
+
+      <!-- Main window -->
+      <div id="window">
+        <!-- Descriptions -->
+        <div id="screen1" class="screen" style="padding-left: 100px; padding-right: 100px">
+          <div class="nestedScreen1">
+            <h2>Wind Speed</h2>
+
+            <p>The potential energy production of a wind turbine is affected by wind speed.
+Assuming all other factors remain constant, the energy production increases with wind
+speed. Energy output and wind speed have a roughly cubic relationship.</p>
+          </div>
+          <div class="nestedScreen2">
+            <h2>Power Output</h2>
+            <p>Wind power or wind energy describes the process by which the wind is used to
+generate mechanical power or electricity. Wind turbines convert the kinetic
+energy in the wind into mechanical power. This mechanical power can be used
+for specific tasks (such as grinding grain or pumping water), or can be converted
+into electricity by a generator.</p>
+          </div>
+          <div class="nestedScreen3">
+            <h2>Rotor Speed</h2>
+            <p>Rotor diameter influences rotor speed in part. Rotor speeds are normally between 150
+and 190 m/s, with a tendency to be higher for smaller rotor diameters [6]. Rotor speeds
+typically range from 120 to 210 m/s. Although some machines may exceed 160,000 rpm,
+the smallest rotor diameter now employed in industry is 28 mm, with rotor speeds up to
+150,000 rpm. Technically, yarn count and rotor diameter are independent of one another.
+The fact that coarser yarns are typically made from subpar cotton, which causes more
+rubbish to accumulate in the rotor, necessitates the use of a larger rotor. The number of
+times that must be cleaned to eliminate rubbish is decreased by a bigger rotor diameter.
+The quantity of fibers laid over each yarn peel-off point</p>
+          </div>
+          <div class="nestedScreen4">
+            <h2>Downtime</h2>
+            <p>The downtime of a wind turbine was the recorded time in seconds that the wind turbine was not operational. This could be due to maintenance or mechanical errors with the wind turbine.</p>
+          </div>
+          <div class="nestedScreen5">
+            <h2>Temperatures</h2>
+            <p>Within the temperature range from -20 degrees to 50 degrees, the wind turbine can
+operate regularly. However, when the temperature is beyond this range, it will influence
+the output energy. If the temperature is too high, the air density will be low, which will
+lessen the energy output. If the temperature is too low, the blades and other parts might
+be frozen, and the wind turbine will stop working.</p>
+          </div>
+          <div class="nestedScreen6">
+            <h2>Vibrations</h2>
+            <p>The wind turbine structure has several degrees of freedom; the tower can bend in
+the longitudinal and lateral directions; the nacelle and rotor can translate and
+rotate in tilt and roll, respectively; and bending of the blade can occur in flapwise
+(out-of-plan) or edgewise (in-plane) directions.
+The vibration of the wind turbine is a very complex, multi-coupling phenomenon.
+Several types of vibrations affect the wind turbine. Nevertheless, the most
+important ones are those of the blade that contribute and propagate to the other
+components as the mechanical transmission chain and the tower. Multiple loads
+induce blade vibrations:</p>
+          </div>
+        </div>
+        <!-- Charts -->
+        <div id="screen2" class="screen">
+          <div class="nestedScreen1">
+            <h2>Wind Speed</h2>
+            <canvas id="windSpeedChart"></canvas>
+          </div>
+          <div class="nestedScreen2">
+            <h2>Power Output</h2>
+            <img src="images/capacity.png">
+            <select id="charts">
+              <option class="chart">Chart 1</option>
+              <option class="chart">Chart 2</option>
+              <option class="chart">Chart 3</option>
+              <option class="chart">Chart 4</option>
+              <option class="chart">Chart 5</option>
+              <option class="chart">Chart 6</option>
+              <option class="chart">Chart 7</option>
+              <option class="chart">Chart 8</option>
+              <option class="chart">Chart 9</option>
+              <option class="chart">Chart 10</option>
+            </select>
+            <div id="chart1">
+              <canvas id="testGraph"></canvas>
+            </div>
+            <div id="chart2">
+              <h1>2</h1>
+            </div>
+            <div id="chart3">
+              <h1>3</h1>
+            </div>
+            <div id="chart4">
+              <canvas id="testGraph2"></canvas>
+            </div>
+            <div id="chart5">
+              <h1>5</h1>
+            </div>
+            <div id="chart6">
+              <h1>6</h1>
+            </div>
+            <div id="chart7">
+              <h1>7</h1>
+            </div>
+            <div id="chart8">
+              <h1>8</h1>
+            </div>
+            <div id="chart9">
+              <h1>9</h1>
+            </div>
+            <div id="chart10">
+              <h1>10</h1>
+            </div>
+          </div>
+          <div class="nestedScreen3">
+            <h2>Rotor Speed</h2>
+            <canvas id="rotorSpeedChart"></canvas>
+          </div>
+          <div class="nestedScreen4">
+            <h2>Downtime</h2>
+            <canvas id="downtimeChart"></canvas>
+          </div>
+          <div class="nestedScreen5">
+            <h2>Temperatures</h2>
+            <canvas id="temperatureChart"></canvas>
+          </div>
+          <div class="nestedScreen6">
+            <h2>Vibrations</h2>
+            <canvas id="vibrationsChart"></canvas>
+          </div>
+        </div>
+        <div id="screen3" class="screen">
+          <div class="nestedScreen1">
+            <h2>Wind Speed</h2>
+          </div>
+          <div class="nestedScreen2">
+            <h2>Power Output</h2>
+          </div>
+          <div class="nestedScreen3">
+            <h2>Rotor Speed</h2>
+          </div>
+          <div class="nestedScreen4">
+            <h2>Downtime</h2>
+          </div>
+          <div class="nestedScreen5">
+            <h2>Temperatures</h2>
+          </div>
+          <div class="nestedScreen6">
+            <h2>Vibrations</h2>
+          </div>
+
+          <!-- Universal download button -->
+          <button id="downloadButton" style="width: 20%">Download</button>
+        </div>
+        <div id="screen4" class="screen">
+          <h1>Power for the next generation.</h1>
+          <iframe width="730" height="411" src="https://www.youtube.com/embed/09PZiooiypE" title="North Central Energy Facilities" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tint --> 
+    <div id="tint" style="transition: 0.3s ease-in-out;position:fixed;height:100%;width:100%; left:100%;top:0px;opacity: 0.5;">
+     <div style="height:100%;width:100%;position:static;background-color:black"></div>
+    </div>
+
+    <div id="navBar" style="width: 0px; padding-top: 20px">
+      <button class="grandButton">Login</button>
+      <button class="grandButton">Dashboard</button>
+      <a href="analysis.html"><button class="grandButton">Analysis</button></a>
+      <a href="https://aep.com/about/ourstory/cleanenergy/ncef"><button class="grandButton">AEP Project Page</button></a>
+      <a href="about.html"><button class="grandButton">About</button></a>
+
+      <button id="hamburger">Menu</button>
+    </div>
+
+    <h1 id="intro" style="color: white;opacity: 0;position: absolute; transition: 1s ease-in-out; top: 40%; right:20%; left:20%">AEP Wind Turbine Analysis</h1>
+  </body>
+
+  <script src="chart.js/dist/chart.js"></script>
+  <script type="module">
+    let buttons = document.getElementsByClassName("button");
+    let optionButtons = document.getElementsByClassName("optionButton");
+    let screens = document.getElementsByClassName("screen");
+
+    // displayGraph("myChart", "Title", "WTGA", 0, 0, 3000, 3000);
+    // Hide all screens on startup
+    hideScreens();
+    hideNestedScreens();
+
+    charts.onchange = function() {
+      let divs = document.getElementsByClassName("chart");
+      for(let i = 0; i < divs.length; i++) {
+        document.getElementById("chart" + (i + 1)).style.display = "none";
+      }
+      document.getElementById("chart" + (parseInt(charts.value.substring(6)))).style.display = "block";
+    }
+    hamburger.onclick = function() {
+      if(navBar.style.width == "0px") {
+        navBar.style.width = "25%";
+        tint.style.left = "25%";
+      }
+      else {
+        navBar.style.width = "0";
+        tint.style.left = "100%";
+      }
+    }
+    // Download button (you don't need IDs ???)
+    downloadButton.onclick = function() {
+      window.open("data/WTGA.json", "_blank");
+    }
+    // For each button type (side menu)
+    for(let i = 0; i < optionButtons.length; i++) {
+      optionButtons[i].onclick = function() {
+        for(let j = 0; j < optionButtons.length; j++) {
+          optionButtons[j].style.backgroundColor = "lightgray";
+        }
+        hideNestedScreens();
+        optionButtons[i].style.backgroundColor = "white";
+        // Display all elements the button controls
+        let elements = document.getElementsByClassName("nestedScreen" + (i + 1));
+        for(let j = 0; j < elements.length; j++) {
+          elements[j].style.display = "block";
+        }
+      };
+    }
+
+    await displayBar("rotorSpeedChart", "Rotor Speed v. Turbine", "bar", 10, 500, "Turbine Letter", "Average Rotor Speed (RPM)");
+    await displayBar("windSpeedChart", "Wind Speed v. Turbine", "bar2", 10, 10, "Turbine Letter", "Average Wind Speed (m/s)");
+    await displayBar("downtimeChart", "Downtime v. Turbine", "bar3", 10, 10, "Turbine Letter", "Downtime (s)");
+    await displayBar("temperatureChart", "Temperature v. Turbine", "temperature", 10, 35, "Turbine Letter", "Average Component Temperature (Celcius)");
+    await displayBar("vibrationsChart", "Vibrations v. Turbine", "vibrations", 10, 6, "Turbine Letter", "Relative Vibrations (?)");
+    await displayScatter("testGraph", "Power v. Expected Power for Turbine A", "WTGA", 0, -100, 2820, 3000, "Expected Power Generated (kW)", "Power Generated (kW)");
+    await displayScatter("testGraph2", "Power v. Expected Power for Turbine D", "WTGA", 0, -100, 2820, 3000, "Expected Power Generated (kW)", "Power Generated (kW)");
+
+    // For each of the 3 buttons
+    for(let i = 0; i < buttons.length; i++) {
+      buttons[i].onclick = function() {
+        for(let j = 0; j < buttons.length; j++) {
+          buttons[j].style.backgroundColor = "lightgray";
+        }
+        hideScreens();
+        buttons[i].style.backgroundColor = "white";
+        // Display the screen
+        screens[i].style.display = "block";
+      };
+    }
+
+    function hideScreens() {
+      // Hide all screens
+      for(let i = 0; i < screens.length; i++) {
+        screens[i].style.display = "none";
+      }
+    }
+    function hideNestedScreens() {
+      // For all option buttons on sidebar
+      for(let i = 0; i < optionButtons.length; i++) {
+        // Get each list of screens this button controls
+        let elements = document.getElementsByClassName("nestedScreen" + (i + 1));
+        // Disable all of them
+        for(let j = 0; j < elements.length; j++) {
+          elements[j].style.display = "none";
+        }
+      }
+    }
+
+    async function displayBar(chartID, title, file, maxX = 1, maxY = 1, xTitle, yTitle) {
+      const config = {
+        type: 'bar',
+        data: {
+          labels: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+          datasets: [{
+            label: title,
+            backgroundColor: ["blue"],
+            data: await fetch("./data/" + file + ".json").then((response) => response.json()).then((json) => { return json; }),
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: xTitle
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: yTitle
+              }
+            }
+          }     
+        }
+      };
+      new Chart(document.getElementById(chartID), config);
+    }
+
+    async function displayScatter(chartID, title, file, minX = 0, minY = 0, maxX = 1, maxY = 1, xLabel, yLabel) {
+      const config = {
+        type: 'scatter',
+        data: {
+          datasets: [{
+            label: title,
+            borderColor: "red",
+            backgroundColor : 'rgba(255,0,0,0.5)',
+            data: await fetch("./data/" + file + ".json").then((response) => response.json()).then((json) => { return json; })
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: xLabel
+              },
+              type: 'linear',
+              position: 'bottom',
+              min: minX,
+              max: maxX,
+            },
+            y: {
+              title: {
+                display: true,
+                text: yLabel
+              },
+              type: 'linear',
+              position: 'bottom',
+              min: minY,
+              max: maxY,
+            }
+          }
+        }
+      };
+      new Chart(document.getElementById(chartID), config);
+    }
+
+    // Animation
+    window.requestAnimationFrame(draw);
+    const fan = new Image();
+    fan.src="images/fan.png";
+    let time = 0;
+    const g = document.getElementById('canvas').getContext('2d');
+    document.getElementById("tint").style.left = "0%";
+    intro.style.opacity = 1;
+    function draw() {
+      let moveX = 45;
+      let moveY = 45;
+      g.clearRect(0, 0, 300, 300);
+      g.save();
+      g.translate(150, 150);
+      g.rotate((Math.PI / 180) * (time * 0.75));
+      g.drawImage(fan, -fan.width / 2, -fan.height / 2);
+      g.restore();
+      window.requestAnimationFrame(draw);
+      time++;
+
+      // Animation on launch
+      if(time == 200) {
+        document.getElementById("tint").style.left = "100%";
+        intro.style.opacity = 0;
+      }
+      if(time == 210) {
+        intro.remove();
+      }
+    }
+
+    // On launch, display description of wind speed
+    buttons[0].click();
+    optionButtons[0].click();
+  </script>
+</html>

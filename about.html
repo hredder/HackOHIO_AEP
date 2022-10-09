@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/AEP_logo.svg/2560px-AEP_logo.svg.png" style="border: none; position: absolute; width: 140px; right: 5px; top: 5px">
+    <div class="header">
+      <h1>AEP Wind Turbine Data</h1>
+      <p>Team "Whatever is Good with Me"</p>
+    </div>
+    <hr style="padding: 1px; background-color: black; margin: 0; border: none;">
+    <!-- Table to distribute buttons evenly -->
+
+    <p><br>Made by Erich Boschert, Henry Redder, Nilay Patel, Dhruv Sekhawat.<br><br>Created for the AEP Hack OHI/O 2022 challenge.</p>
+    <div id="navBar" style="width: 0px; padding-top: 20px">
+      <button class="grandButton">Login</button>
+      <a href="popup.html"><button class="grandButton">Dashboard</button></a>
+      <a href="analysis.html"><button class="grandButton">Analysis</button></a>
+      <a href="https://aep.com/about/ourstory/cleanenergy/ncef"><button class="grandButton">AEP Project Page</button></a>
+      <a href="about.html"><button class="grandButton">About</button></a>
+
+      <button id="hamburger">Menu</button>
+    </div>
+  </body>
+
+  <script type="module">
+    hamburger.onclick = function() {
+      if(navBar.style.width == "0px") {
+        navBar.style.width = "25%";
+      }
+      else {
+        navBar.style.width = "0";
+      }
+    }
+  </script>
+</html>

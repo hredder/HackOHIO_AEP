@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <style>
+      img {
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/AEP_logo.svg/2560px-AEP_logo.svg.png" style="border: none; position: absolute; width: 140px; right: 5px; top: 5px">
+    <div class="header">
+      <h1>AEP Wind Turbine Data</h1>
+      <p>Analysis</p>
+    </div>
+    <hr style="padding: 1px; background-color: black; margin: 0; border: none;">
+    <!-- Table to distribute buttons evenly -->
+
+    <p style="padding-left: 50px; padding-right: 50px;"><br>From an analysis of the data, we found the wind turbine A, B, D, H, and J were faulty while turbine C, E, F, G, and I were fully functional.
+To identify the faulty wind turbines, the group looked at which turbines had the smallest average difference in power generated vs its expected
+power generator. This is shown in the graphs below. <br><br>
+
+<img src="images/A.png">
+<img src="images/B.png">
+<img src="images/C.png">
+<img src="images/D.png">
+<img src="images/E.png">
+<img src="images/F.png">
+<img src="images/G.png">
+<img src="images/H.png">
+<img src="images/I.png">
+<img src="images/J.png">
+<br><br>
+
+To find out what was causing the errors, the group first looked at the downtime graphs for the turbines. The group determmined 
+that turbine A, B, and J experienced significantly more downtime compared to the other turbines. This was a major issue and contributed
+to significantly less power production compared to the other motors.
+
+Another contributing factor to the power loss of turbines was the average component temperature. When looking at the charts created,
+D has a spike in average component temperature compared to the others which could cause the power loss observed.
+
+Additionally, vibrations tend to have a very significant impact on the power loss of the different turbines. When observing the chart of
+vibrations, A, B, D, H, and J had higher vibrations compared to C, E, F, G, and I. This indicates that there is a high correlation between
+power output and vibrations.
+
+Finally, the group analyzed the wind speeds and rotor speeds of the different tubines. Overall, each rotor had a relatively consistent
+wind speed measured. Despite this, rotor A, B, D, and H have significantly lower rotor speeds than the others. This signifies
+that rotor speed is highly correlated with power generation.</p>
+<br><br>
+    <div id="navBar" style="width: 0px; padding-top: 20px">
+      <button class="grandButton">Login</button>
+      <a href="popup.html"><button class="grandButton">Dashboard</button></a>
+      <a href="analysis.html"><button class="grandButton">Analysis</button></a>
+      <a href="https://aep.com/about/ourstory/cleanenergy/ncef"><button class="grandButton">AEP Project Page</button></a>
+      <a href="about.html"><button class="grandButton">About</button></a>
+
+      <button id="hamburger">Menu</button>
+    </div>
+  </body>
+
+  <script type="module">
+    hamburger.onclick = function() {
+      if(navBar.style.width == "0px") {
+        navBar.style.width = "25%";
+      }
+      else {
+        navBar.style.width = "0";
+      }
+    }
+  </script>
+</html>
